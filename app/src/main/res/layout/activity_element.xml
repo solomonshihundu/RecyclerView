@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:id="@+id/parent_layout">
+
+    <FrameLayout
+        android:id="@+id/imageFrame"
+        android:layout_width="match_parent"
+        android:layout_height="450dp">
+
+        <ImageView
+            android:id="@+id/mainDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/imageFrame"
+            android:scaleType="centerCrop"
+            android:layout_alignTop="@+id/imageFrame"
+            app:srcCompat="@drawable/beauty" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/viewFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/imageFrame">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/viewFrame"
+            android:layout_alignTop="@+id/viewFrame">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/houseProfileImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/houseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/houseProfileImage"
+                android:text="Runda"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/viewsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/houseName"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="45dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/view" />
+
+            <TextView
+                android:id="@+id/number_of_view"
+                android:layout_marginTop="52dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/viewsIcon"
+                android:text=" 1000 views" />
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>
